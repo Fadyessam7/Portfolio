@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import myPhoto from "../assets/MyPhoto.jpg";
 
@@ -21,11 +21,6 @@ const Hero = () => {
         </div>
         {/* Social Media Logos */}
         <div className="flex items-center justify-center md:justify-start space-x-6 mt-5 text-white">
-          <div className="h-10 w-10 flex items-center justify-center border border-gray-400 rounded-full">
-            <a href="">
-              <Instagram />
-            </a>
-          </div>
           <div className="h-10 w-10 flex items-center justify-center border border-gray-400 rounded-full">
             <a href="https://github.com/Fadyessam7">
               <Github />

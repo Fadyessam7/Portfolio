@@ -7,9 +7,7 @@ const About = () => {
           Front-end Developer | React.Js | Redux
         </p>
       </div>
-      <div className="grid grid-cols-12">
-        
-      </div>
+      <div className="grid grid-cols-12"></div>
     </div>
   );
 };

@@ -1,10 +1,17 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
+import myPhoto from "../assets/MyPhoto.jpg";
 
 const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row px-4 items-center">
       {/* Content */}
-      <div className="flex-1 md:ml-20">
+      <motion.div
+        className="flex-1 md:ml-20"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="text-center space-y-4 md:text-left">
           <span className="text-gray-400 text-2xl block">Hi I am</span>
           <h2 className="text-gray-300 text-3xl">Fady Essam</h2>
@@ -38,11 +45,20 @@ const Hero = () => {
             </a>
           </button>
         </div>
-      </div>
+      </motion.div>
       {/* Image */}
-      <div className="flex-1 mt-4 flex items-center justify-center">
-        <img className="w-fit h-96 rounded-full mx-4 md:rounded-md"  src="src\assets\MyPhoto.jpg" alt="" />
-      </div>
+      <motion.div
+        className="flex-1 mt-4 flex items-center justify-center"
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <img
+          className="w-fit h-96 rounded-full mx-4 md:rounded-md"
+          src={myPhoto}
+          alt=""
+        />
+      </motion.div>
     </div>
   );
 };

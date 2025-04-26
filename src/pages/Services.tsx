@@ -7,6 +7,7 @@ import {
   SquareActivity,
 } from "lucide-react";
 import ServiceCard from "../components/ui/ServiceCard";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
@@ -21,7 +22,13 @@ const Services = () => {
         it's a single-page app or a complex UI, I ensure high performance,
         accessibility, and cross-device compatibility in every project.
       </p>
-      <div className="grid grid-cols-12 gap-4 mt-8">
+      <motion.div
+        className="grid grid-cols-12 gap-4 mt-8"
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <ServiceCard
           title="Responsive Web Application"
           description="Build responsive and adaptive UIs that deliver seamless experiences across all devices and screen sizes"
@@ -58,7 +65,7 @@ const Services = () => {
         >
           <Figma className="text-[#FD6F00] m-auto" size={48} />
         </ServiceCard>
-      </div>
+      </motion.div>
     </div>
   );
 };

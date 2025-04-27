@@ -4,7 +4,7 @@ import myPhoto from "../assets/MyPhoto.jpg";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row px-4 items-center">
+    <div className="flex flex-col md:flex-row px-4 items-center w-11/12 md:w-7xl mx-auto mt-12">
       {/* Content */}
       <motion.div
         className="flex-1 md:ml-20"
@@ -21,12 +21,12 @@ const Hero = () => {
         </div>
         {/* Social Media Logos */}
         <div className="flex items-center justify-center md:justify-start space-x-6 mt-5 text-white">
-          <div className="h-10 w-10 flex items-center justify-center border border-gray-400 rounded-full">
+          <div className="h-10 w-10 flex items-center justify-center border border-gray-400 rounded-full hover:bg-white hover:text-black">
             <a href="https://github.com/Fadyessam7">
               <Github />
             </a>
           </div>
-          <div className="h-10 w-10 flex items-center justify-center border border-gray-400 rounded-full">
+          <div className="h-10 w-10 flex items-center justify-center border border-gray-400 rounded-full hover:bg-white hover:text-black">
             <a href="https://www.linkedin.com/in/fady-e-158a26247/">
               <Linkedin />
             </a>
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
         {/* Download CV Button */}
         <div className="flex justify-center items-center mt-10 md:justify-start">
-          <button className="text-white p-3 border border-white rounded-xl">
+          <button className="text-white p-3 border border-white rounded-xl hover:bg-white hover:text-black transition-all duration-300">
             <a href="https://drive.google.com/file/d/1Eq6lZFTXPB3is3n9OW1P-GdJCPVSuHwW/view?usp=sharing">
               Download CV
             </a>

@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="w-full p-5 mb-10">
+    <nav className="mb-10 w-11/12 md:w-6xl mx-auto mt-12 ">
       <div className="flex items-center justify-between">
         {/* Hamburger menu (visible only on mobile) */}
         <button

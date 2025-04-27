@@ -1,8 +1,9 @@
+import Slider from "react-slick";
 import ServiceCard from "../components/ui/ServiceCard";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import { useEffect, useState } from "react";
 import { services } from "../data";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,16 +17,14 @@ const Services = () => {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: "free", // smoother scroll
-    rubberband: true, // more smooth
-    slides: {
-      perView: 1,
-      spacing: 15,
-    },
-    drag: true,
-  });
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
 
   return (
     <div className="w-11/12 md:w-2/3 mx-auto mt-12">
@@ -37,17 +36,19 @@ const Services = () => {
       </p>
 
       {isMobile ? (
-        <div ref={sliderRef} className="keen-slider mt-8">
-          {services.map((service, idx) => (
-            <div key={idx} className="keen-slider__slide flex justify-center">
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-              >
-                <service.icon className="text-[#FD6F00] m-auto" size={48} />
-              </ServiceCard>
-            </div>
-          ))}
+        <div className="mt-8">
+          <Slider {...sliderSettings}>
+            {services.map((service, idx) => (
+              <div key={idx} className="flex justify-center ">
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                >
+                  <service.icon className="text-[#FD6F00] m-auto" size={48} />
+                </ServiceCard>
+              </div>
+            ))}
+          </Slider>
         </div>
       ) : (
         <div className="mt-8 grid grid-cols-3 gap-6">

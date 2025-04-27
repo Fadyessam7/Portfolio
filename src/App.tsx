@@ -1,8 +1,8 @@
 import "./index.css";
 import Navbar from "./components/Navbar";
-import Hero from "./pages/Hero";
-import About from "./pages/About";
-import Services from "./pages/Services";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Services from "./sections/Services";
 import BackTopButton from "./components/ui/BackTopButton";
 import { motion, useScroll, useSpring } from "framer-motion";
 

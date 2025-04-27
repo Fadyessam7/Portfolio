@@ -1,3 +1,4 @@
+import { ChevronUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const BackToTopButton = () => {
@@ -29,10 +30,10 @@ const BackToTopButton = () => {
   return (
     isVisible && (
       <button
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-white p-3 rounded-full shadow-lg hover:bg-[#FD6F00] cursor-pointer"
+        className="fixed bottom-6 right-6 border rounded-md border-[#FD6F00] py-3 px-6 text-[#FD6F00] cursor-pointer hover:border-[#E46400] hover:text-[#E46400] transition-all duration-200"
         onClick={scrollToTop}
       >
-        ↑
+        <ChevronUp />
       </button>
     )
   );

@@ -4,7 +4,7 @@ import myPhoto from "../assets/MyPhoto.jpg";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row px-4 items-center w-11/12 md:w-7xl mx-auto mt-12">
+    <div className="flex flex-col md:flex-row px-4 items-center w-11/12 md:w-7xl mx-auto mt-16" id="hero">
       {/* Content */}
       <motion.div
         className="flex-1 md:ml-20"

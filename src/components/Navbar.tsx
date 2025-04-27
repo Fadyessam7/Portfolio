@@ -1,9 +1,14 @@
 import { useState } from "react";
 
 const Navbar = () => {
+  //** States
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //** Handlers
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
   return (
-    <nav className="mb-10 w-11/12 md:w-6xl mx-auto mt-12 ">
+    <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-11/12 md:w-7xl bg-[#1e1e1e] rounded-xl z-1000 px-4 py-2">
       <div className="flex items-center justify-between">
         {/* Hamburger menu (visible only on mobile) */}
         <button
@@ -39,7 +44,10 @@ const Navbar = () => {
 
         {/* Logo (centered on mobile, aligned left on desktop) */}
         <div className="flex-1 text-center md:text-left md:flex-none">
-          <a className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6E00] to-[#E60026] text-xl">
+          <a
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6E00] to-[#E60026] text-xl"
+            href="#hero"
+          >
             Fady Essam
           </a>
         </div>
@@ -75,19 +83,39 @@ const Navbar = () => {
         }`}
       >
         <div className="space-y-2 text-white">
-          <a href="" className="block py-2 hover:text-[#FD6F00]">
+          <a
+            href=""
+            className="block py-2 hover:text-[#FD6F00]"
+            onClick={handleLinkClick}
+          >
             Home
           </a>
-          <a href="#about" className="block py-2 hover:text-[#FD6F00]">
+          <a
+            href="#about"
+            className="block py-2 hover:text-[#FD6F00]"
+            onClick={handleLinkClick}
+          >
             About
           </a>
-          <a href="" className="block py-2 hover:text-[#FD6F00]">
+          <a
+            href=""
+            className="block py-2 hover:text-[#FD6F00]"
+            onClick={handleLinkClick}
+          >
             Skills
           </a>
-          <a href="" className="block py-2 hover:text-[#FD6F00]">
+          <a
+            href=""
+            className="block py-2 hover:text-[#FD6F00]"
+            onClick={handleLinkClick}
+          >
             Projects
           </a>
-          <a href="" className="block py-2 hover:text-[#FD6F00]">
+          <a
+            href=""
+            className="block py-2 hover:text-[#FD6F00]"
+            onClick={handleLinkClick}
+          >
             Contacts
           </a>
         </div>

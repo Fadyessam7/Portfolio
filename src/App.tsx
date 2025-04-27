@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Services from "./sections/Services";
 import BackTopButton from "./components/ui/BackTopButton";
 import { motion, useScroll, useSpring } from "framer-motion";
+import Skills from "./sections/Skills";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -33,6 +34,7 @@ function App() {
       <Hero></Hero>
       <Services></Services>
       <About></About>
+      <Skills></Skills>
       <BackTopButton />
     </>
   );

@@ -1,5 +1,5 @@
 import { ChevronUp } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,4 +39,4 @@ const BackToTopButton = () => {
   );
 };
 
-export default BackToTopButton;
+export default memo(BackToTopButton);

@@ -71,7 +71,11 @@ const Navbar = () => {
         </div>
 
         {/* Hire Me button (visible on all screens) */}
-        <a href="https://wa.me/201221597924?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20work%20opportunity%20with%20you.%20Thank%20you.">
+        <a
+          href="https://wa.me/201221597924?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20work%20opportunity%20with%20you.%20Thank%20you."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] px-4 py-1.5 rounded-md text-sm text-white ml-auto md:ml-0 cursor-pointer">
             Contact via WhatsApp
           </button>

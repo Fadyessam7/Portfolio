@@ -1,5 +1,6 @@
 // components/ScrollIndicator.jsx
 import { motion, useScroll, useSpring } from "framer-motion";
+import { memo } from "react";
 
 const ScrollIndicator = () => {
   const { scrollYProgress } = useScroll();
@@ -27,4 +28,4 @@ const ScrollIndicator = () => {
   );
 };
 
-export default ScrollIndicator;
+export default memo(ScrollIndicator);

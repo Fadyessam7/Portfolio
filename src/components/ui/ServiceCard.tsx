@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 interface IProps {
   title: string;
   description: string;
@@ -14,4 +14,4 @@ const ServiceCard = ({ title, children, description }: IProps) => {
   );
 };
 
-export default ServiceCard;
+export default memo(ServiceCard);

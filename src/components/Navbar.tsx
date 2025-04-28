@@ -8,7 +8,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
   return (
-    <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-11/12 md:w-7xl bg-[#1e1e1e] rounded-xl z-1000 px-4 py-2">
+    <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-11/12 md:w-7xl bg-[#1e1e1e] rounded-xl z-1000 px-4 py-4">
       <div className="flex items-center justify-between">
         {/* Hamburger menu (visible only on mobile) */}
         <button
@@ -53,27 +53,29 @@ const Navbar = () => {
         </div>
         {/* Desktop Navigation (hidden on mobile) */}
         <div className="hidden md:flex items-center space-x-20 text-white ml-10 ">
-          <a href="" className="hover:text-[#FD6F00]">
+          <a href="#hero" className="hover:text-[#FD6F00]">
             Home
           </a>
           <a href="#about" className="hover:text-[#FD6F00]">
             About
           </a>
-          <a href="" className="hover:text-[#FD6F00]">
+          <a href="#skills" className="hover:text-[#FD6F00]">
             Skills
           </a>
-          <a href="" className="hover:text-[#FD6F00]">
+          <a href="#projects" className="hover:text-[#FD6F00]">
             Projects
           </a>
-          <a href="" className="hover:text-[#FD6F00]">
+          <a href="#contact" className="hover:text-[#FD6F00]">
             Contacts
           </a>
         </div>
 
         {/* Hire Me button (visible on all screens) */}
-        <button className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] px-4 py-1.5 rounded-md text-sm text-white ml-auto md:ml-0 cursor-pointer">
-          Hire me
-        </button>
+        <a href="https://wa.me/201221597924?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20work%20opportunity%20with%20you.%20Thank%20you.">
+          <button className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] px-4 py-1.5 rounded-md text-sm text-white ml-auto md:ml-0 cursor-pointer">
+            Contact via WhatsApp
+          </button>
+        </a>
       </div>
 
       {/* Mobile Menu (visible only on mobile when hamburger is clicked) */}
@@ -84,7 +86,7 @@ const Navbar = () => {
       >
         <div className="space-y-2 text-white">
           <a
-            href=""
+            href="#hero"
             className="block py-2 hover:text-[#FD6F00]"
             onClick={handleLinkClick}
           >
@@ -98,21 +100,21 @@ const Navbar = () => {
             About
           </a>
           <a
-            href=""
+            href="#skills"
             className="block py-2 hover:text-[#FD6F00]"
             onClick={handleLinkClick}
           >
             Skills
           </a>
           <a
-            href=""
+            href="#projects"
             className="block py-2 hover:text-[#FD6F00]"
             onClick={handleLinkClick}
           >
             Projects
           </a>
           <a
-            href=""
+            href="#contact"
             className="block py-2 hover:text-[#FD6F00]"
             onClick={handleLinkClick}
           >

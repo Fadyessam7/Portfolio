@@ -9,12 +9,12 @@ import {
 import reactLogo from "../assets/React-icon.svg.png";
 import htmlLogo from "../assets/HTML5_logo_and_wordmark.svg.png";
 import cssLogo from "../assets/CSS3_logo_and_wordmark.svg.png";
-import jsLogo from "../assets/javascript-logo.png";
+import jsLogo from "../assets/659715ef78dd04cdbe11a27b35ff7c49.png";
 import tsLogo from "../assets/Typescript_logo.svg.png";
 import bootstrapLogo from "../assets/Bootstrap_logo.svg.png";
 import tailwindLogo from "../assets/Tailwind_CSS_Logo.svg.png";
-import postmanLogo from "../assets/Postman_(software).png";
-import nextJSLogo from "../assets/Nextjs-logo.svg.png";
+import postmanLogo from "../assets/Postman.png";
+import nextJSLogo from "../assets/nextjs.256x153.png";
 
 export const services = [
   {

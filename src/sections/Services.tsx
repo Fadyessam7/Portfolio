@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useResponsive from "../hooks/useResponsive";
 import sliderConfig from "../config/sliderConfig";
-import dotsStyle from "../components/ui/dotsStyle";
+import DotsStyle from "../components/ui/dotsStyle";
 
 const Services = () => {
   const isMobile = useResponsive();
@@ -14,7 +14,7 @@ const Services = () => {
 
   return (
     <div className="w-11/12 md:w-2/3 mx-auto mt-12">
-      <style>{dotsStyle}</style>
+      <style>{DotsStyle}</style>
       <h1 className="font-bold text-5xl text-white text-center">Services</h1>
       <p className="text-gray-400 text-center mt-4 hidden md:block">
         As a Frontend Developer specializing in React.js, I build fast,

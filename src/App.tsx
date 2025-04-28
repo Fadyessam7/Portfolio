@@ -4,38 +4,54 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Services from "./sections/Services";
 import BackTopButton from "./components/ui/BackTopButton";
-import { motion, useScroll, useSpring } from "framer-motion";
 import Skills from "./sections/Skills";
+import { useEffect, useState } from "react";
+import { Mosaic } from "react-loading-indicators";
+import ScrollIndicator from "./components/ui/ScrollIndicator";
 
 function App() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
-      <motion.div
-        id="scroll-indicator"
-        style={{
-          scaleX: scaleX,
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: 5,
-          originX: 0,
-          backgroundColor: "#FD6F00",
-          zIndex: 9999,
-        }}
-      />
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <Services></Services>
-      <About></About>
-      <Skills></Skills>
-      <BackTopButton />
+      {!isLoading && <ScrollIndicator />}
+      {isLoading ? (
+        <div className="fixed inset-0 flex items-center justify-center bg-[#1e1e1e] z-50">
+          <Mosaic
+            color="#FD6F00"
+            size="medium"
+            text="Welcome To My Portfolio"
+          />
+        </div>
+      ) : (
+        <>
+          <main>
+            <Navbar />
+            <Hero />
+            <Services />
+            <About />
+            <Skills />
+          </main>
+          <BackTopButton />
+        </>
+      )}
     </>
   );
 }

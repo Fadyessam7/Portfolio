@@ -3,11 +3,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Services from "./sections/Services";
-import BackTopButton from "./components/ui/BackTopButton";
 import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import BackTopButton from "./components/ui/BackTopButton";
+import ScrollIndicator from "./components/ui/ScrollIndicator";
 import { useEffect, useState } from "react";
 import { Mosaic } from "react-loading-indicators";
-import ScrollIndicator from "./components/ui/ScrollIndicator";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +49,7 @@ function App() {
             <Services />
             <About />
             <Skills />
+            <Projects />
           </main>
           <BackTopButton />
         </>

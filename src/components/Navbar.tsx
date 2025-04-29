@@ -72,7 +72,7 @@ const Navbar = () => {
 
         {/* Hire Me button (visible on all screens) */}
         <a
-          href="https://wa.me/201221597924?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20work%20opportunity%20with%20you.%20Thank%20you."
+          href="https://api.whatsapp.com/send?phone=201221597924&text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20work%20opportunity%20with%20you.%20Thank%20you."
           target="_blank"
           rel="noopener noreferrer"
         >
